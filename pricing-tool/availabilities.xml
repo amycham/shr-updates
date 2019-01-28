@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<availabilities>
+  <house>
+    <address stub='123main'>123 Main Street</address>
+    <room stub='123mainsw'>
+      <name>Master - Southwest</name>
+      <dateavailable>May 20, 2019</dateavailable>
+      <!-- TBD, CA or Claimed -->
+      <status>CA</status>
+      <rent>$585</rent>
+    </room>
+  </house>
+</availabilities>
