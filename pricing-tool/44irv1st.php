@@ -1,7 +1,7 @@
 
 
 <?php
-	include("single-room.php");
+	include("single-room.php"); 	//always make this the first line of php
 
 	$here = "44irv";
 	$floor = "1stfloor";
