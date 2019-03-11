@@ -14,10 +14,10 @@
 	**************************************************************************/
 	$mastern = get_room('0001');									//change to roomID from rent-table.csv for each room
 	$mastern_rent = $mastern['rent'];							//room rent
-  $mastern_garage = $room_info['garage'];				//garage parking rent
-  $mastern_outside = $room_info['parkOutside'];	//driveway/yard parking rent
-  $mastern_util = $room_info['utilShare'];			//estimated utilities share
-  $mastern_addr = $room_info['streetAddress'];	//house street address
+  $mastern_garage = $mastern['garage'];				//garage parking rent
+  $mastern_outside = $mastern['parkOutside'];	//driveway/yard parking rent
+  $mastern_util = $mastern['utilShare'];			//estimated utilities share
+  $mastern_addr = $mastern['streetAddress'];	//house street address
 
 	$rooms = array(
 	"mastern" => array(
