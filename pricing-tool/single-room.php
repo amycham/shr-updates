@@ -1,12 +1,7 @@
 <?php
 
-  $room_rent = '';
-  $garage_rent = '';
-  $outside_rent = '';
-  $utility_share = '';
-  $house_address = '';
-
   function get_room($room_id){
+    echo "called with id: $room_id";
     /* Map Rows and Loop Through Them */
     $rows   = array_map('str_getcsv', file('rent-table.csv'));
     $header = array_shift($rows);
@@ -18,7 +13,7 @@
         //echo $row[0];
 
         $current_room = $csv[$i]['roomID'];
-
+        echo $current_room;
         if($current_room == $room_id){
           return $csv[$i];
           break;
@@ -28,8 +23,8 @@
           $i++;
         }
     }
-  }
-
+  };
+  
   $room_info = get_room('0001');
 
   $room_rent = $room_info['rent'];

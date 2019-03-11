@@ -7,17 +7,20 @@
 	$floor = "1stfloor";
 	$title = "44 Irvington Road - 1st Floor";
 
-	$mastern = get_room('0001');
-	$mastern_rent = $mastern['rent'];
-	echo "LOOK HERE: ".$mastern_rent."<br>";
-  $garage_rent = $room_info['garage'];
-  $outside_rent = $room_info['parkOutside'];
-  $utility_share = $room_info['utilShare'];
-  $house_address = $room_info['streetAddress'];
+	/**************************************************************************
+	*** create this set of variables for each room. 												***
+	*** Use the room stub (eg, mastern) as beginning of each variable				***
+	*** Use the unique roomID from the spreadsheet to pass into get_room();	***
+	**************************************************************************/
+	$mastern = get_room('0001');									//change to roomID from rent-table.csv for each room
+	$mastern_rent = $mastern['rent'];							//room rent
+  $mastern_garage = $room_info['garage'];				//garage parking rent
+  $mastern_outside = $room_info['parkOutside'];	//driveway/yard parking rent
+  $mastern_util = $room_info['utilShare'];			//estimated utilities share
+  $mastern_addr = $room_info['streetAddress'];	//house street address
 
 	$rooms = array(
 	"mastern" => array(
-			"room_id" => "0001",
 			"title" => "1st floor Master Suite w/ private bath and private entrance, unfurnished",
 			"featured" => 1,
 			"count" => 32,
@@ -35,7 +38,7 @@
 					  <li>Private full bath room directly connected to student room</li>
 					  <li>Tile floor in private full bath room</li>
 
-					  <li>Rent $".$mastern_rent.".00/month for room and parking in drive way/back yard, utilities are split. Parking in the garage is $25 additonal per month. </li>"
+					  <li>Rent $".$mastern_rent.".00/month for room and parking in drive way/back yard, utilities are split. Parking in the garage is $".$mastern_garage." additonal per month. </li>"
 		),
 
 	"kitchen" => array(
