@@ -1,0 +1,6 @@
+roomID,houseStub,streetAddress,roomName,furnished,privateBath,rent,utilShare,garage,parkOutside
+0001,44irv,44 Irvington Rd,1st Floor Master Suite,no,y,700,43,40,10
+0002,44irv,44 Irvington Rd,Master East,yes,y,675,43,40,10
+0003,44irv,44 Irvington Rd,Master South,yes,y,665,43,40,10
+0004,44irv,44 Irvington Rd,Penthouse,yes,y,725,43,40,10
+0005,44irv,44 Irvington Rd,Master West,yes,y,670,43,40,10
