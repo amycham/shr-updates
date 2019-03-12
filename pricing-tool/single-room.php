@@ -1,6 +1,10 @@
 <?php
-
-  function get_room($room_id){
+  /***********************************************
+  ** Retrieve desired room based on specified data
+  ** $room_id:  identifying value to match
+  ** $target:   heading of target column
+  ************************************************/
+  function get_room($room_id, $target){
 
     /* Map Rows and Loop Through Them */
     $rows   = array_map('str_getcsv', file('rent-table.csv'));
@@ -10,10 +14,10 @@
     $i      = 0;
     foreach($rows as $row) {
         $csv[] = array_combine($header, $row);
-        //echo $row[0];
+        //capture roomID for row
+        $current_room = $csv[$i][$target];
 
-        $current_room = $csv[$i]['roomID'];
-        echo $current_room;
+        //match current ID against target ID, return and stop if true
         if($current_room == $room_id){
           return $csv[$i];
           break;

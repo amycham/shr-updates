@@ -12,21 +12,21 @@
 	*** Use the room stub (eg, mastern) as beginning of each variable				***
 	*** Use the unique roomID from the spreadsheet to pass into get_room();	***
 	**************************************************************************/
-	$mastern = get_room('0004');									//change to roomID from rent-table.csv for each room
+	$mastern = get_room('0004','roomID');									//change to roomID from rent-table.csv for each room
 	$mastern_rent = $mastern['rent'];							//room rent
   $mastern_garage = $mastern['garage'];				//garage parking rent
   $mastern_outside = $mastern['parkOutside'];	//driveway/yard parking rent
   $mastern_util = $mastern['utilShare'];			//estimated utilities share
   $mastern_addr = $mastern['streetAddress'];	//house street address
 
-	$study = get_room('0005');									//change to roomID from rent-table.csv for each room
+	$study = get_room('0005','roomID');									//change to roomID from rent-table.csv for each room
 	$study_rent = $study['rent'];							//room rent
   $study_garage = $study['garage'];				//garage parking rent
   $study_outside = $study['parkOutside'];	//driveway/yard parking rent
   $study_util = $study['utilShare'];			//estimated utilities share
   $study_addr = $study['streetAddress'];	//house street address
 
-	$mastere = get_room('0002');									//change to roomID from rent-table.csv for each room
+	$mastere = get_room('0002','roomID');									//change to roomID from rent-table.csv for each room
 	$mastere_rent = $mastere['rent'];							//room rent
 	$mastere_garage = $mastern['garage'];				//garage parking rent
 	$mastere_outside = $mastere['parkOutside'];	//driveway/yard parking rent

@@ -12,7 +12,7 @@
 	*** Use the room stub (eg, mastern) as beginning of each variable				***
 	*** Use the unique roomID from the spreadsheet to pass into get_room();	***
 	**************************************************************************/
-	$mastern = get_room('0001');									//change to roomID from rent-table.csv for each room
+	$mastern = get_room('0001', 'roomID');									//change to roomID from rent-table.csv for each room
 	$mastern_rent = $mastern['rent'];							//room rent
   $mastern_garage = $mastern['garage'];				//garage parking rent
   $mastern_outside = $mastern['parkOutside'];	//driveway/yard parking rent
