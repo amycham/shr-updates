@@ -1,6 +1,6 @@
-roomID,houseStub,streetAddress,roomName,furnished,privateBath,rent,utilShare,garage,parkOutside
-0001,44irv,44 Irvington Rd,1st Floor Master Suite,no,y,700,43,40,10
-0002,44irv,44 Irvington Rd,Master East,yes,y,675,43,40,10
-0003,44irv,44 Irvington Rd,Master South,yes,y,665,43,40,10
-0004,44irv,44 Irvington Rd,Penthouse,yes,y,725,43,40,10
-0005,44irv,44 Irvington Rd,Master West,yes,y,670,43,40,10
+roomID,streetAddress,houseStub,detailURL,roomName,availDate,availStatus,rent,utilShare,garage,parkOutside,privateBath,furnished
+0001,44 Irvington Rd,44irv,44irv1st.php,1st Floor Master Suite,8/1/2020,Q,700,43,40,10,y,no
+0002,44 Irvington Rd,44irv,44irv2nd.php,Master East,5/15/2019,CA,675,43,40,10,y,yes
+0003,44 Irvington Rd,44irv,44irv2nd.php,Master South,5/15/2019,CA,665,43,40,10,y,yes
+0004,44 Irvington Rd,44irv,44irv2nd.php,Penthouse,8/1/2020,Q,725,43,40,10,y,yes
+0005,44 Irvington Rd,44irv,44irv2nd.php,Master West,8/1/2019,Q,670,43,40,10,y,yes
