@@ -1,6 +1,11 @@
 roomID,streetAddress,houseStub,detailURL,roomName,availDate,availStatus,rent,utilShare,garage,parkOutside,privateBath,furnished
-0001,44 Irvington Rd,44irv,44irv1st.php,1st Floor Master Suite,8/1/2020,Q,700,43,40,10,y,no
-0002,44 Irvington Rd,44irv,44irv2nd.php,Master East,5/15/2019,CA,675,43,40,10,y,yes
-0003,44 Irvington Rd,44irv,44irv2nd.php,Master South,5/15/2019,CA,665,43,40,10,y,yes
-0004,44 Irvington Rd,44irv,44irv2nd.php,Penthouse,8/1/2020,Q,725,43,40,10,y,yes
-0005,44 Irvington Rd,44irv,44irv2nd.php,Master West,8/1/2019,Q,670,43,40,10,y,yes
+0001,44 Irvington Rd,44irv,44irv1st.php,1st Floor Master Suite,8/1/2020,Q,700,43,40,10,private,no
+0002,44 Irvington Rd,44irv,44irv2nd.php,Master East,5/15/2019,CA,675,43,40,10,private,yes
+0003,44 Irvington Rd,44irv,44irv2nd.php,Master South,5/15/2019,CA,665,43,40,10,private,yes
+0004,44 Irvington Rd,44irv,44irv2nd.php,Penthouse,8/1/2020,Q,725,43,40,10,private,yes
+0005,44 Irvington Rd,44irv,44irv2nd.php,Master West,8/1/2019,Q,670,43,40,10,private,yes
+0006,65 Irvington Rd,65irv,65irv2nd.php,2nd Floor Master South East,5/15/2019,CA,670,,,,private,yes
+0007,115 Irvington Rd,115irv,115irv2nd.php,3rd Bedroom,7/1/2018,Q,635,,,,shared,yes
+0008,168 Irvington Rd,168irv,168irv2nd.php,Master South,7/1/2019,Q,680,,,,private,yes
+0009,,,,,,,,,,,,
+0010,,,,,,,,,,,,

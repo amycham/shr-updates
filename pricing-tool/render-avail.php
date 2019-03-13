@@ -1,4 +1,10 @@
 <?php
+  /*********************************************************
+  ** TODO: make functions more flexible to handle different
+  ** sorting and categorization $criteria
+  ** TODO: add in safety tests for invalid or malicious data
+  ***********************************************************/
+
   /***********************************************
   ** Render tables of availabilities
   ** TODO: extend to categorize on any criteria
@@ -43,8 +49,8 @@
         $i++;
     }
     $avail_confirmed = sort_array($avail_confirmed, 'availDate');
-    //$avail_possible = sort_array($avail_possible, 'availDate');
-    //$avail_pending = sort_array($avail_pending, 'availDate');
+    $avail_possible = sort_array($avail_possible, 'availDate');
+    $avail_pending = sort_array($avail_pending, 'availDate');
 
     //render tables by availStatus
     $table_rendering.=make_table('avail-confirmed', $avail_confirmed, "Confirmed Availabilities");
@@ -60,39 +66,39 @@
   ** $tdata: array of data
   ************************************************/
   function make_table($tid, $tdata, $tcaption){
+    if(!empty($tdata)){
+      $table_start = "<table cellspacing='0' id='$tid' class='roomfeatures'>
+      <caption>$tcaption</caption>
+      	<thead>
+      		<tr>
+      		<th>Date</th>
+      		<th>Address</th>
+      		<th>Room</th>
+      		<th>Bath</th>
+      		<th>Furnished</th>
+      		<th>Rent</th>
+          </tr>
+          <tbody>";
 
-    $table_start = "<table cellspacing='0' id='$tid' class='roomfeatures'>
-    <caption>$tcaption</caption>
-    	<thead>
-    		<tr>
-    		<th>Date</th>
-    		<th>Address</th>
-    		<th>Room</th>
-    		<th>Bath</th>
-    		<th>Furnished</th>
-    		<th>Rent</th>
-        </tr>
-        <tbody>";
+      $table_close = "</tbody></table>";
+      $table_body = $table_start;
 
-    $table_close = "</tbody></table>";
-    $table_body = $table_start;
+      $rows = $tdata;
+      $i = 0;
+      /* categorize into arrays by status */
+      foreach($rows as $row) {
+        $table_body.="<tr><td>".$tdata[$i]['availDate']."</td>".
+          "<td>".$tdata[$i]['streetAddress']."</td>".
+          "<td>".$tdata[$i]['roomName']."</td>".
+          "<td>".$tdata[$i]['privateBath']."</td>".
+          "<td>".$tdata[$i]['furnished']."</td>".
+          "<td>".$tdata[$i]['rent']."</td></tr>";
 
-    $rows = $tdata;
-    $i = 0;
-    /* categorize into arrays by status */
-    foreach($rows as $row) {
-      $table_body.="<tr><td>".$tdata[$i]['availDate']."</td>".
-        "<td>".$tdata[$i]['streetAddress']."</td>".
-        "<td>".$tdata[$i]['roomName']."</td>".
-        "<td>".$tdata[$i]['privateBath']."</td>".
-        "<td>".$tdata[$i]['furnished']."</td>".
-        "<td>".$tdata[$i]['rent']."</td></tr>";
+          $i++;
+    }
 
-        $i++;
+    $table_body.=$table_close;
   }
-
-  $table_body.=$table_close;
-
   return $table_body;
 }
 /***********************************************
@@ -122,10 +128,15 @@ function sort_array($data, $criteria){
         $i++;
       }
     }
+
       //sort array
+      usort($data, function($a, $b) {
+          $t1 = strtotime($a['availDate']);
+          $t2 = strtotime($b['availDate']);
+          return $t1 - $t2;
+      });
 
       //return sorted array
-      print_r($data);
       return $data;
 
   }
