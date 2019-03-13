@@ -1,6 +1,6 @@
 body{ 
-	margin: 0; 
-	padding: 0; 
+	margin: 0;
+	padding: 0;
 	font-family: 'trebuchet ms', arial, helvetica, sans-serif;
 	font-size: .8em;
 }
@@ -11,16 +11,16 @@ div#container{
 }
 
 div#header{
-	
-	
-	
+
+
+
 	margin-bottom: 10px;
-	
+
 }
 
-div#header a img{ 
-	border: none; 
-	
+div#header a img{
+	border: none;
+
 	}
 
 div#header ul{
@@ -33,45 +33,45 @@ div#header ul{
 
 div#header ul li{
 	display: block;
-	float: left;	
+	float: left;
 	margin: 0;
-	padding: 0;	
-	
-	
+	padding: 0;
+
+
 }
 
 div#header ul li a{
-	display: block; 
+	display: block;
 	height: 105px;
 	text-indent: -9999px;
-	
+
 }
 
 div#header ul li a.irv115link{
 	width: 140px;
-	
-	
+
+
 }
 
 div#header ul li a.ral94link{
 	width: 137px;
-	
-	
+
+
 }
 
 div#header ul li a.crit95link{
-	width: 133px;	
-	
-	
+	width: 133px;
+
+
 }
 
 div#header ul li a.ral84link{
 	width: 140px;
-	
+
 }
 
 div#header ul li a.crit89link{
-	width: 137px;	
+	width: 137px;
 }
 
 div#header ul li a.irv168link{
@@ -129,7 +129,7 @@ div#leftnav ul li ul li a{
 div#text{
 	width: 400px;
 	float: left;
-	margin-left: 15px;	
+	margin-left: 15px;
 	border-bottom: 1px solid rgb(166,153,39);
 }
 
@@ -169,7 +169,7 @@ div#photos img{
 
 div#photos div.lgimg{
 	position: absolute;
-	left: -615px;	
+	left: -615px;
 	display: none;
 }
 
@@ -179,7 +179,7 @@ div#photos div.lgimg img{
 
 span.clear{ display: block; clear: both; }
 
-div#footer{ 
+div#footer{
 	text-align: center;
 }
 
@@ -196,7 +196,7 @@ span#sharethis_0 a{
 img.featured{
 	cursor: pointer;
 	}
-	
+
 a.thisfloor{
 	cursor: default;
 	color: #000000;
@@ -221,7 +221,7 @@ div.roomdetail{
 
 div.roomdetail img.detfull{
 	position: absolute;
-	
+
 	left: -150px;
 	z-index: 50;
 	border: 1px solid rgb(10,72,132);
@@ -235,4 +235,3 @@ div.floorthumbs img{
 	cursor: pointer;
 	border: 1px solid rgb(10,72,132);
 	}
-

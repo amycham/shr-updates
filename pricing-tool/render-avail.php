@@ -3,6 +3,7 @@
   ** TODO: make functions more flexible to handle different
   ** sorting and categorization $criteria
   ** TODO: add in safety tests for invalid or malicious data
+  ** TODO: subcategorize within tables by month and year
   ***********************************************************/
 
   /***********************************************
@@ -67,15 +68,15 @@
   ************************************************/
   function make_table($tid, $tdata, $tcaption){
     if(!empty($tdata)){
-      $table_start = "<table cellspacing='0' id='$tid' class='roomfeatures'>
+      $table_start = "<table cellspacing='0' id='$tid' class='available'>
       <caption>$tcaption</caption>
       	<thead>
       		<tr>
-      		<th>Date</th>
-      		<th>Address</th>
-      		<th>Room</th>
-      		<th>Bath</th>
-      		<th>Furnished</th>
+      		<th class='avail-date'>Date</th>
+      		<th class='avail-addr'>Address</th>
+      		<th class='avail-room'>Room</th>
+      		<th class='avail-bath'>Bath</th>
+      		<th class='avail-furn'>Furnished</th>
       		<th>Rent</th>
           </tr>
           <tbody>";
@@ -88,11 +89,11 @@
       /* categorize into arrays by status */
       foreach($rows as $row) {
         $table_body.="<tr><td>".$tdata[$i]['availDate']."</td>".
-          "<td>".$tdata[$i]['streetAddress']."</td>".
+          "<td><a href='".$tdata[$i]['detailURL']."'>".$tdata[$i]['streetAddress']."</a></td>".
           "<td>".$tdata[$i]['roomName']."</td>".
           "<td>".$tdata[$i]['privateBath']."</td>".
           "<td>".$tdata[$i]['furnished']."</td>".
-          "<td>".$tdata[$i]['rent']."</td></tr>";
+          "<td>$".$tdata[$i]['rent']."</td></tr>";
 
           $i++;
     }
