@@ -35,6 +35,27 @@ table.roomfeatures td.featurename{
 	background-color: rgb(239, 247, 255);
 	}
 
+table.available{
+	margin-bottom: 30px;
+}
+
 table.available caption{
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+	padding-bottom: 10px;
+}
+
+table.available th.avail-date{
+	width: 15%;
+}
+
+table.available th.avail-addr{
+	width: 20%;
+}
+
+table.available th.avail-room{
+	width: 30%;
+}
+
+table.available tr:nth-child(even){
+	background-color: rgb(239, 247, 255);
 }
